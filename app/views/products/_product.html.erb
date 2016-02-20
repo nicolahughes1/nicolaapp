@@ -2,7 +2,6 @@
     <td><%= product.name %></td>
     <td><%= product.description %></td>
     <td><%= product.image_url %></td>
-    <%= image_tag(product.image_url, class: "img-responsive") %>
     <td><%= product.colour %></td>
     <td><%= link_to 'Show', product %></td>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
