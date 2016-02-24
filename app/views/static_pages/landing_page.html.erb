@@ -12,19 +12,11 @@
       <div class="item<%= " active" if product == @products.first %>">
         <%= image_tag(product.image_url) %>
       <div class="carousel-caption">
-        <%= product.name %>
-      </div>
+        <p><%= product.name %></p>
         </div>
+      </div>
     <% end %>
   </div>
-
-    <div class="item">
-      <img alt="asics shoe" src="https://heavyeditorial.files.wordpress.com/2015/05/asics-gel-nimbus-16.jpg?quality=65&strip=all&strip=all" />
-      <div class="carousel-caption">
-        <p>Asics Concrete running shoe</p>
-      </div>
-    </div>
-  </div> <!-- end carousel example generic -->
 
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">

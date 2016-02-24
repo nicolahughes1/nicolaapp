@@ -1,17 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xs-6 col-md-4">
-      <% @products.each do |product| %>
-         <%= render @products %>
+  <% @products.each do |product| %>
+    <% render @products %>
   <% end %>
-    </div> <!-- col -->
-    <% end %>
-  <div> <!-- row -->
-<div> <!-- container fluid -->
 
 <br>
 
