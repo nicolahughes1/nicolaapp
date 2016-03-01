@@ -27,9 +27,16 @@
       </button>
 	 </div> <!-- end navbar-header --> 
 		<ul>
-			<li>Home</li>
-			<li>About</li>
-			<li>Contact</li>
+      <li><%= link_to "Home", static_pages_index_path %></li>
+      <li><%= link_to "Products", products_path %></li>
+      <li><%= link_to "About", static_pages_about_path %></li>
+      <li><%= link_to "Contact", static_pages_contact_path %></li>
+      
+      <%= form_tag("/products", method: "get") do %>
+        <%= label_tag(:q, "Search for:") %>
+        <%= text_field_tag(:q) %>
+        <%= submit_tag("Search") %>
+      <% end %>
 		</ul>
 	</div> <!-- end container fluid--> 
 	</nav><!-- end navbar navbar-default --> 
