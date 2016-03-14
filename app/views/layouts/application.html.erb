@@ -76,8 +76,13 @@
 </nav> <!-- end navbar navbar-default --> 
 
   <div class="messages"> 
-    <p class="notice"><%=notice %></p>
-    <p class="alert"><%=alert %></p>
+    <% if notice %> 
+      <p id="notice" class= "alert alert-info"><%= notice %></p>
+    <% end %>
+
+    <% if alert %> 
+      <p id="alert" class= "alert alert-warning"><%= alert %></p>
+    <% end %>
   </div> <!-- end messages -->
 
 <%= yield %>
