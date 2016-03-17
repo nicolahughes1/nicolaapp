@@ -1,23 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<div class= "col-xs-12 col-md-6">
-	<table> 
-		<thead>
-			<tr>
-				<th class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">Name</th>
-				<th class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">Description</th>
-				<th class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">Image url</th>
-				<th class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">Colour</th>
-				<th class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">Price</th>
-			</tr>
-		</thead>
-
-		<tbody>
-    		<%= render @products %>
-    	</tbody>
-	</table>
+<div class= "container">
+	<h2> Shoe Products </h2> 
+		<%= render @products %>
+<br> 
+	<%= link_to 'New Product', new_product_path %>
 </div> 
 
-<br>
 
-<%= link_to 'New Product', new_product_path %>
+
