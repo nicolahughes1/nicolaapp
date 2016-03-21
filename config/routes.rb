@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :users
-  resources :users
-  resources :userfirst_names
-  resources :products, :invoices, :orders, :users
+
+resources :products do 
+  resources :comments
+end 
+resources :users 
+
+devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
+
+  resources :products, :users, :orders, only: [:index, :show, :create, :destroy]
 
   get 'static_pages/about'
 
   get 'static_pages/contact'
+  post 'static_pages/thank_you'
 
   get 'static_pages/index'
 
@@ -16,8 +21,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'static_pages#landing_page'
-
-  post 'static_pages/thank_you'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
