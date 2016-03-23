@@ -1,14 +1,13 @@
 <div class="row">
-  <div class="col-md-4"><%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image: @product.image_url) %></div>  
+  <div class="col-md-7 col-xs-12">
+    <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url) %></div>  
     
-    <div class="col-md-4">
+    <div class="col-md-5 col-xs-12">
       <p>
         <h2><%= @product.name %></h2> 
       </p>
 
-      <p>
-        <%= @product.description %>
-      </p>
+      <p><%= @product.description %></p>
 
       <p>
         Price: <%= number_to_currency(@product.price) %> 
