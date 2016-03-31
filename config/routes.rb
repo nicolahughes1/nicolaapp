@@ -7,6 +7,8 @@ resources :users
 
 devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
 
+resources :orders, only: [:index, :show, :create, :destroy]
+  
   get 'static_pages/about'
 
   get 'static_pages/contact'
@@ -28,7 +30,6 @@ devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out 
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :orders, only: [:index, :show, :create, :destroy]
 
   # Example resource route with options:
   #   resources :products do
