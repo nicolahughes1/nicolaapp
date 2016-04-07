@@ -1,10 +1,8 @@
 == README
 
-Intro to nicolaapp.  More to be added as developed.
+Intro to nicolaapp. Created for CareerFoundry course work.
 
-Things you may want to cover:
-
-* Ruby version
+* Ruby version 2.2.1
 
 * System dependencies
 

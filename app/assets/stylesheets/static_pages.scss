@@ -1,3 +1,8 @@
+.carousel-caption {
+    color: black;
+    padding: 150px;
+}
+
 h1 {
 	color: #d02090;
 	font-family: Tahoma, Geneva, sans-serif;
@@ -5,14 +10,14 @@ h1 {
 }
 
 .navbar-default {
-	color: #d02090;
 	font-family: Tahoma, Geneva, sans-serif;
-	background-color: #cccccc;
+	background-color: #b0b0b0;
 }
 
-img {
-    width: 25%;
-    height: 20px;
+img {    
+    max-width: 20px; 
+    max-height: 200px;
+    position: static;
 }
 
 footer {
@@ -21,6 +26,5 @@ footer {
     bottom: 0;
     height: 25px;
     width: 100%;
-    color: #d02090;
-    background-color: #cccccc;
+    background-color: #b0b0b0;
 }

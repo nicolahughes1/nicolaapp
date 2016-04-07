@@ -13,13 +13,13 @@
   <div class="carousel-inner" role="listbox">
     <% @products.each do |product| %>
       <div class="item<%= " active" if product == @products.first %>">
-        <%= image_tag(product.image_url) %>
+        <%= image_tag(product.image_url, size: "250x200", class: "img-responsive center-block") %>
       <div class="carousel-caption">
         <p><%= product.name %></p>
         </div>
       </div>
     <% end %>
-  </div>
+  </div> <!-- end carousel-inner-->
 
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
