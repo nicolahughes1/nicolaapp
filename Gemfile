@@ -31,7 +31,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # CUSTOM GEMS
 gem 'cancancan'
 gem 'devise'
-gem 'will_paginate', '~> 3.0.7'
+gem 'will_paginate', '~> 3.0.5'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
