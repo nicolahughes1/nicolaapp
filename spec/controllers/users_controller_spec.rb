@@ -9,19 +9,19 @@ describe UsersController, :type => :controller do
   end
 
   describe "GET #show" do
-     context "User is logged in" do
+     context "User 1 is logged in" do
       before do
-        sign_in @user
+        sign_in @user1
 
      end
 
-      it "loads the correct user details" do
-         get :show, id: @user.id
+      it "loads the correct details of User 1" do
+         get :show, id: @user1.id
          expect(response.status).to eq 200
-         expect(assigns(:user)).to eq @user
+         expect(assigns(:user)).to eq @user1
        end
 
-      it "doesn't load the second user" do
+      it "doesn't load user details of Unser 2" do
          get :show, id: @user2.id
          expect(response.status).to eq 302
          expect(response).to redirect_to(root_path)
@@ -30,7 +30,7 @@ describe UsersController, :type => :controller do
 
      context "No user is logged in" do
        it "redirects to login" do
-         get :show, id: @user.id
+         get :show, id: @user1.id
          expect(response).to redirect_to(root_path)
        end
      end
