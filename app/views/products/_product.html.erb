@@ -5,13 +5,14 @@
 
 	<div class="col-sm-6 col-md-9">
 		<h3><%= link_to product.name, product %></h3>
-			<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%>
-  			<%= link_to 'Edit', edit_product_path(product), class: "btn btn-warning" %> 
-  			<%= link_to 'Back', products_path , class: "btn btn-info" %>
 		<p><b>Product Description:</b> <%= product.description %></p>
 		<p><b>Colour:</b> <%= product.colour %></p> 
 		<span class="lead">Price <%= number_to_currency(product.price) %></span>
 			<hr>
+
+  		<%= link_to 'Edit', edit_product_path(product), class: "btn btn-warning" %> 
+  		<%= link_to 'Back', products_path , class: "btn btn-info" %>
+  		<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%>
 	</div><!--col sm-6 col-md-9 --> 
 	
 	</div><!--col --> 
