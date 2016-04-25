@@ -1,11 +1,10 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!
+  #before_filter :authenticate_user!
   respond_to :json, :html
 
   # GET /products
   # GET /products.json
-  
   def index
     if params[:q]
     search_term = params[:q]
@@ -13,6 +12,7 @@ class ProductsController < ApplicationController
   else
     @products = Product.all
     end
+    respond_with @products
   end 
 
   # GET /products/1
@@ -39,7 +39,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to "http://www.nike.com/us/en_us/c/running/nike-run-club/training-plans", notice: 'Product was successfully created.' }
+        format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
