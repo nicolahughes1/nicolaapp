@@ -5,6 +5,7 @@
 <%= link_to 'Back', products_path, class: "btn btn-success", role: "button" %>
 
 <div class="row">
+  <% cache @product do %>
   <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
     <%= image_tag(@product.image_url, width: "250", class: "img-responsive img-zoom", data_zoom_image: @product.image_url) %>
  
@@ -25,7 +26,7 @@
         <%= hidden_field_tag(:product_id, @product.id) %> 
       <% end %>
 </div> <!-- end col-md-4--> 
-
+<% end %>  <!-- cache product -->  
 </div> <!-- end row --> 
 
 <% end %>

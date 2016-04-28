@@ -33,7 +33,7 @@
   	</td>
   	<td>
     	{{order.product_id}}
-    	<small ng-show="order.user.email"><br>-{{ order.user.email }}</small>
+    	<small ng-show="order.user.email"><br>{{ order.user.email }}</small>
   	</td>
   	<td>
   		<strong>{{ order.total | currency : "usd" }}</strong>
