@@ -34,8 +34,8 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><%= link_to "Home", static_pages_index_path %></li>
-        <li><%= link_to "Products", products_path %></li>
         <li><%= link_to "About", static_pages_about_path %></li>
+        <li><%= link_to "Products", products_path %></li>
         <li><%= link_to "Contact", static_pages_contact_path %></li>
 
         <% if user_signed_in? %>
@@ -87,8 +87,10 @@
 
 <%= yield %>
 
-	<footer>
-		&copy; 2016 Nicola Footer
+	<footer class="app footer">
+		&copy; 2016 Nicola App
+    <br>
+    Date and local time is <%= Time.now %>
 	</footer> 
 
 </body>
